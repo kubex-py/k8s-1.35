@@ -21,7 +21,8 @@ part of kubex's changelog.
 - The package moved to its own repository, [kubex-py/k8s-1.35](https://github.com/kubex-py/k8s-1.35),
   with its history. The models are generated with
   [kubex-codegen](https://github.com/kubex-py/kubex-codegen) v0.2.0 from Kubernetes v1.35.10 and
-  are unchanged. `pyproject.toml` is written by hand, with project URLs for the new repository.
+  are unchanged. `pyproject.toml` and `LICENSE` are maintained by hand; `pyproject.toml` has
+  project URLs for the new repository.
 
 ## [0.1.0-beta.4] - 2026-10-28
 

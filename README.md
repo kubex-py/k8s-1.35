@@ -26,10 +26,10 @@ Documentation: https://kubex.codemageddon.me/
 
 ## How the models are made
 
-Everything under `kubex/k8s/v1_35/`, and `LICENSE`, is generated. Don't edit them by hand: change
-[kubex-codegen](https://github.com/kubex-py/kubex-codegen) instead. `pyproject.toml` is written by
-hand; its ruff settings and its ruff and mypy versions match kubex-codegen's, so CI checks the
-models the way they were generated.
+Everything under `kubex/k8s/v1_35/` is generated. Don't edit it by hand: change
+[kubex-codegen](https://github.com/kubex-py/kubex-codegen) instead. `pyproject.toml` and `LICENSE`
+are written by hand; the ruff settings and the ruff and mypy versions in `pyproject.toml` match
+kubex-codegen's, so CI checks the models the way they were generated.
 
 The kubex-codegen release this repository uses is pinned in `.kubex-codegen-version`. To regenerate
 from the latest 1.35.x spec:
