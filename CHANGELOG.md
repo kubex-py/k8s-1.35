@@ -36,15 +36,15 @@ part of kubex's changelog.
   events.k8s.io Event lists).
 - `CustomResourceDefinition` schema fields (`default`, `enum`, `items`, `additionalProperties`).
 - `Quantity` fields accept numbers.
-- The package requires `kubex-core>=0.1.0b4,<0.2`.
+- The package requires `kubex-core>=0.1.0b4,<0.2` (it accepted any `kubex-core` before).
 
 ### Changed
 
 - **Breaking:** Timestamp fields are typed `Time`/`MicroTime` and resource quantities `Quantity`
   (from `kubex_core.models.types`) instead of `datetime` and `str`.
 - **Breaking:** Spec-required `Time`/`MicroTime`/byte fields are typed `T | None`. The `JSON`,
-  `JSONSchemaPropsOr*`, `ManagedFieldsEntry` and `ShardInfo` modules are removed;
-  `ManagedFieldsEntry` and `ShardInfo` live in `kubex_core.models.metadata`.
+  `JSONSchemaPropsOr*` and `ManagedFieldsEntry` modules are removed; `ManagedFieldsEntry` lives
+  in `kubex_core.models.metadata`.
 
 ## [0.1.0-beta.3] - 2026-10-23
 
@@ -67,6 +67,16 @@ No changes to the models; released together with kubex 0.1.0-beta.2.
 ## [0.1.0-beta.1] - 2026-05-06
 
 First beta, released together with kubex 0.1.0-beta.1.
+
+### Added
+
+- `Pod` implements `HasExec`, `HasAttach`, `HasPortForward`, `HasEphemeralContainers` and
+  `HasResize`, so kubex's `exec`, `attach`, `portforward`, `ephemeral_containers` and `resize`
+  subresources accept it.
+
+### Changed
+
+- The Development Status classifier is Beta.
 
 ## [0.1.0-alpha.1] - 2026-04-19
 
